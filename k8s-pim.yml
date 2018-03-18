@@ -1,3 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pim-service
+spec:
+  selector:
+    app: pim
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,7 +17,7 @@ metadata:
   labels:
     app: pim
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: pim
