@@ -1,0 +1,10 @@
+# Ports
+HttpPort: 8080
+
+# selector
+Component: "pim-service"
+Replicas: 3
+Image: "abderrazak/pim-service"
+ImageTag: "1.0"
+ImagePullPolicy: "Always"
+Resources: {}
