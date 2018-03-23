@@ -14,12 +14,16 @@ kind: Deployment
 metadata:
   name: pim-deployment
   labels:
+    mvp: true
     app: pim
+    language: java
 spec:
-  replicas: 6
+  replicas: {{ .Values.Replicas }}
   selector:
     matchLabels:
       app: pim
+      mvp: true
+      language: java
   template:
     metadata:
       labels:
@@ -27,6 +31,6 @@ spec:
     spec:
       containers:
       - name: pim
-        image: abderrazak/pim-service:1.0
+        image: {{ .Values.Image }}
         ports:
         - containerPort: 8080
