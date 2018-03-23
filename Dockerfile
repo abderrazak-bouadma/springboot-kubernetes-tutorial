@@ -1,4 +1,4 @@
-FROM openjdk:9.0.1-11-jre-slim-sid
+FROM openjdk:10-ea-46-jre-experimental
 EXPOSE 8080
 VOLUME /tmp
 ARG JAR_FILE
