@@ -1,5 +1,6 @@
 package com.lvmh.pim.api.web.rest.dto;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Map;
  * on 03/03/2018.
  */
 @Data
+@ApiModel(value = "Article", description = "Service Article Domain Object")
 public class ArticleReadDto {
 
     private String sku;

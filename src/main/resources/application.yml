@@ -3,3 +3,6 @@ spring:
     name: pim-service
 
 
+akeneo-api:
+  ribbon:
+    listOfServers: https://dior-parfums-staging.cloud.akeneo.com/api/rest/v1
